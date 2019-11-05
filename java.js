@@ -9,12 +9,13 @@ penPromise.then(function(penData){
 //create an array of quizes
 var getGrade =function(quizes)
     {
-    var quizGrades=quizes.map(function(quiz) 
+    var quizGrades= quizes.map(function(quiz) 
         {
         return quiz.grade
         }
 
-    )}
+    )
+    return quizGrades; }
 
 //Create SVG element
 var svg = d3.select("body")
