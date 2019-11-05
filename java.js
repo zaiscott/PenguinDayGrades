@@ -1,20 +1,26 @@
-var penPromise= d3.json("classData")
+var penPromise= d3.json("classData.json")
 penPromise.then(function(penData){
     console.log("penData", penData);
-}
-                function(err){
+},
+    function(err)
+{
     console.log("fail", err)
 })
 //create an array of quizes
-var getGrade =  quizes.map(function(quiz) {
-                          return quiz.grade}
+var getGrade =function(quizes)
+    {
+    var quizGrades=quizes.map(function(quiz) 
+        {
+        return quiz.grade
+        }
 
+    )}
 
 //Create SVG element
 var svg = d3.select("body")
             .append("svg")
-            .attr("width", w)
-            .attr("height", h);
+            .attr("width", 500)
+            .attr("height", 500);
 
 svg.selectAll("circle")
    .data(getGrade)
